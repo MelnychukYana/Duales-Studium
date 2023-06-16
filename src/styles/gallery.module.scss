@@ -1,0 +1,60 @@
+
+@mixin onTablet {
+  @media (max-width: 1023px) {
+    @content;
+  }
+}
+
+@mixin onPhone {
+  @media (max-width: 744px) {
+    @content;
+  }
+}
+
+.gallery {
+  padding-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-gap: 24px;
+
+  @include onPhone {
+    padding-top: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 20px;
+  }
+}
+
+.photo {
+  width: 100%;
+  height: 0;
+  padding-bottom: 100%;
+  border-radius: 10%;
+  overflow: hidden; /* Добавлено, чтобы обрезать изображение внутри рамки */
+}
+
+.blueBorder {
+  border: 2px solid rgba(60, 119, 245, 0.4);
+}
+
+.greenBorder {
+  border: 2px solid rgba(169, 217, 39, 0.4);
+}
+
+.orangeBorder {
+  border: 2px solid rgba(253, 122, 13, 0.4);
+}
+
+
+img {
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* Добавлено, чтобы изображение заполняло всю доступную область */
+}
+
+.active {
+  z-index: 10; /* Перемещение активного фото наверх */
+}
+
+.hoverEffect {
+  transform: scale(1.1);
+}

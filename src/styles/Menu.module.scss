@@ -1,0 +1,213 @@
+$height-desktop: 50px;
+
+
+@mixin onTablet {
+  @media (max-width: 1023px) {
+    @content;
+  }
+}
+
+@mixin onPhone {
+  @media (max-width: 743px) {
+    @content;
+  }
+}
+
+.container__menu {
+  padding: 0 120px 60px 120px;
+  width: 100%;
+  min-height: 100%;
+  height: 100vh;
+  position: fixed;
+  z-index: 30;
+  color: azure;
+  overflow-y: auto;
+
+  @include onTablet() {
+    padding: 0px 72px 30px 72px;
+  }
+
+  @include onPhone() {
+    padding: 0px 20px 15px 20px;
+  }
+}
+
+.menu__links {
+  align-items: center;
+  box-sizing: border-box;
+  font-size: 28px;
+  white-space: nowrap;
+  font-weight: bold;
+
+  @include onTablet() {
+    padding-top: 10px;
+    font-size: 22px;
+  }
+
+  @include onPhone() {
+    padding-top: 10px;
+    font-size: 22px;
+  }
+}
+
+.menu__button {
+  @include onPhone() {
+    padding-top: 10px;
+  }
+}
+
+.block__btn {
+  display: flex;
+  width: 100%;
+  height: $height-desktop;
+  top: 0;
+  left: 0;
+  align-items: center;
+}
+
+.go__back {
+  display: inline-block;
+  position: absolute;
+  right: 120px;
+  cursor: pointer;
+
+  @include onTablet() {
+    right: 72px;
+  }
+
+  @include onPhone() {
+    right: 20px;
+  }
+}
+
+.link__content {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding-top: 60px;
+
+  @include onTablet() {
+    padding-top: 60px;
+  }
+
+  @include onPhone() {
+    padding-top: 50px;
+  }
+}
+
+.menu__item {
+  display: block;
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+}
+
+.active {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  -webkit-text-underline-offset: 4px;
+}
+
+/* Смена фона */
+
+.background-product {
+  background-color: #feecd4;
+  color: #FD7A0D;
+  ;
+}
+
+.background-about {
+  background-color: #f2fbe2;
+  color: #a5dd0a;
+}
+
+.background-customers {
+  background-color: #e4ecf9;
+  color: #3C77F5;
+}
+
+/* Список */
+.menu__list {
+  font-size: 30px;
+  padding-top: 15px;
+
+  @include onTablet() {
+    padding-top: 10px;
+    font-size: 22px;
+  }
+
+  @include onPhone() {
+    padding-top: 10px;
+    font-size: 22px;
+  }
+
+  &__plus {
+    display: none;
+
+    @include onTablet() {
+      display: none;
+    }
+  
+    @include onPhone() {
+      display: block;
+      padding-top: 10px;
+      font-size: 22px;
+    }
+  }
+
+  &__mini {
+    font-size: 25px;
+    padding-top: 5px;
+    padding-left: 1em;
+
+    @include onTablet() {
+      padding-top: 2px;
+      font-size: 20px;
+    }
+  
+    @include onPhone() {
+      padding-top: 2px;
+      font-size: 18px;
+    }
+
+    &__item {
+      padding-top: 8px;
+      white-space: nowrap;
+
+      @include onTablet() {
+        white-space: normal;
+      }
+    
+      @include onPhone() {
+        white-space: normal;
+      }
+    }
+
+    &__link:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.li__menu {
+  cursor: pointer;
+  white-space: nowrap;
+  
+  @include onPhone() {
+    white-space: normal;
+  }
+}
+
+.li__menu__plus {
+  padding-top: 8px;
+}
+
+.li__menu:hover {
+  text-decoration: underline;
+}
+
+.li__menu__plus:hover {
+  text-decoration: underline;
+}
