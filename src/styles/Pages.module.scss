@@ -1,0 +1,82 @@
+@mixin onTablet {
+  @media (max-width: 1023px) {
+    @content;
+  }
+}
+
+@mixin onPhone {
+  @media (max-width: 743px) {
+    @content;
+  }
+}
+
+.pages {
+  font-size: 18px;
+  line-height: 28.5px;
+  width: 100%;
+
+  @include onTablet() {
+    font-size: 16px;
+  }
+
+  @include onPhone() {
+    font-size: 14px;
+  }
+}
+
+.blue__title {
+  color:#3C77F5;
+  font-size: 20px;
+  line-height: 28.5px;
+  width: 100%;
+  padding-bottom: 20px;
+
+  @include onTablet() {
+    text-align: center;
+  }
+
+  @include onPhone() {
+    text-align: center;
+    font-size: 18px;
+  }
+}
+
+.blue__text {
+  color:#3C77F5;
+}
+
+.pages {
+  &__link:hover {
+    text-decoration: underline; 
+  }
+}
+
+.imprint {
+  width: 100%;
+
+  &__1{
+    &__pic {
+      width: 100%;
+      height: auto;
+      justify-content: center;
+    }
+  }
+
+  &__2 {
+    background-color: #3C77F517;
+    white-space: pre-line;
+  }
+
+  &__blocks {
+    padding-top: 20px;
+    white-space: pre-line; /* Перенос строки*/
+
+    @include onTablet() {
+      padding-top: 10px;
+    }
+  
+    @include onPhone() {
+      padding-top: 10px;
+    }
+  }
+}

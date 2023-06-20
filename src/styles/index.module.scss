@@ -27,7 +27,6 @@ html {
 
 .container__pages {
   padding: calc($height-desktop + 60px) 120px 60px 120px;
-  display: flex;
   width: 100%;
 
   @include onTablet() {
