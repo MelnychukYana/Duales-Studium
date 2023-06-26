@@ -259,26 +259,34 @@
   }
 }
 
-.newspaper__stack {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+.presse{
+  &__container {
+    display: flex;
 
-.newspaper {
-  width: 200px;
-  height: 300px;
-  margin-bottom: 10px;
-}
+    &__info {
+      padding-left: 24px;
 
-.newspaper__blue {
-  background-color: blue;
-}
+      @include onTablet {
+        padding-left: 24px;
+      }
+    
+      @include onPhone {
+        padding-left: 20px;
+      }
+    }
 
-.newspaper__orange {
-  background-color: orange;
-}
+    &__pic {
+      width: 40%;
+      height: auto;
 
-.newspaper__green {
-  background-color: green;
+      @include onPhone() {
+        width: 50%;
+      }
+    }
+  }
+
+  &__pic {
+    width: 100%;
+    height: auto;
+  }
 }

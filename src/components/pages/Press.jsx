@@ -6,6 +6,8 @@ import index from "../../styles/index.module.scss";
 import styles from "../../styles/Pages.module.scss";
 import grid from "../../styles/grid.module.scss";
 
+import NEWSPAPERS from "../../images/newspapers.png";
+
 const Press = () => {
   return (
     <div className={`${styles.pages}`} id='press'>
@@ -57,24 +59,33 @@ const Press = () => {
         <h3 className={`${styles.blue__title}`}>
           Pressekontakt
         </h3>
+      </div>
 
-        <div className={styles.case}>
-          <p className={`${styles.pages} ${styles.case__text}`}>
-          duales-studium GmbH
-          {"\n"}
-          Nils Frohloff
-          {"\n"}
-          Geschäftsführer
-          </p>
+      <div className={`${styles.case} ${grid.grid__item__1_12} ${grid.grid__item__tablet__1_6} ${grid.grid__item__phone__1_2}`}>
+        <div className={`${styles.presse__container}`}>
+          <div className={`${styles.presse__container__pic}`}>
+            <img src={NEWSPAPERS} alt="IMG" className={`${styles.presse__pic}`} />
+          </div>
 
-          <p className={`${styles.pages} ${styles.case__text}`}>
-           <a href="mailto:info@duales-studium.de" className={`${styles.blue__text} `}>info@duales-studium.de</a>
+
+          <div className={`${styles.presse__container__info}`}>
+            <p className={`${styles.pages} ${styles.case__text}`}>
+              duales-studium GmbH
             {"\n"}
-            <a href="tel: 052285329891" className={`${styles.blue__text} `}>05228-5329890</a>
-          </p>
+              Nils Frohloff
+            {"\n"}
+              Geschäftsführer
+            </p>
+
+            <p className={`${styles.pages} ${styles.case__text}`}>
+            <a href="mailto:info@duales-studium.de" className={`${styles.blue__text} `}>info@duales-studium.de</a>
+              {"\n"}
+              <a href="tel: 052285329891" className={`${styles.blue__text} `}>05228-5329890</a>
+            </p>
+          </div>
+        </div>
         </div>
 
-      </div>
       </div>
 
 
