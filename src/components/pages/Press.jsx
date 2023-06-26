@@ -34,7 +34,7 @@ const Press = () => {
 
           <div className={styles.case}>
             <p className={`${styles.pages} ${styles.case__text}`}>
-              22.02.2010: <Link to={ROUTES.HOME} className={`${styles.orange__text} ${styles.pages__link}`}>Online-Portal für den potenziellen Führungskräftenachwuchs</Link>
+              22.02.2010: <Link to={`${ROUTES.PRESS}/pressemitteilungen`} className={`${styles.orange__text} ${styles.pages__link}`}>Online-Portal für den potenziellen Führungskräftenachwuchs</Link>
             </p>
           </div>
 
