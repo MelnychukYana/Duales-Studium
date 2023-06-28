@@ -16,7 +16,7 @@ const Press = () => {
           <h2>Presse</h2>
         </div>
 
-        <div className={`${styles.case}  ${grid.grid__item__1_12} ${grid.grid__item__tablet__1_6} ${grid.grid__item__phone__1_2}`}>
+        <div className={`${styles.case} ${grid.grid__item__1_12} ${grid.grid__item__tablet__1_6} ${grid.grid__item__phone__1_2}`}>
           <p className={`${styles.pages} ${styles.case__text}`}>
             Erfahren Sie mehr über das Projekt duales-studium.de. Falls Sie einen Artikel über uns schreiben, würden wir Sie bitten uns ein Belegexemplar zur Verfügung zu stellen.
           </p>
@@ -47,9 +47,9 @@ const Press = () => {
 
         <div className={styles.case}>
           <p className={`${styles.pages} ${styles.case__text}`}>
-            23.02.2011: <Link to={ROUTES.HOME} className={`${styles.green__text} ${styles.pages__link}`}>"Flirtbörse" für Studenten und Unternehmen</Link>
+            23.02.2011: <Link to={`${ROUTES.PRESS}/pressespiegel`} className={`${styles.green__text} ${styles.pages__link}`}>"Flirtbörse" für Studenten und Unternehmen</Link>
             {"\n"}
-            Januar 2011: <Link to={ROUTES.HOME} className={`${styles.green__text} ${styles.pages__link}`}>Per "Klick" zum Traumstudium</Link>
+            Januar 2011: <Link to={`${ROUTES.PRESS}/pressespiegel`} className={`${styles.green__text} ${styles.pages__link}`}>Per "Klick" zum Traumstudium</Link>
           </p>
         </div>
 
@@ -84,7 +84,7 @@ const Press = () => {
             </p>
           </div>
         </div>
-        </div>
+      </div>
 
       </div>
 

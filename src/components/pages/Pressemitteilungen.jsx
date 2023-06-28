@@ -17,7 +17,7 @@ const Pressemitteilungen = () => {
           </div>
 
           <div className={`${styles.case} ${grid.grid__item__1_12} ${grid.grid__item__tablet__1_6} ${grid.grid__item__phone__1_2}`}>
-            <p className={`${styles.pages} ${styles.case__text} ${styles.presse__plus}`}>
+            <p className={`${styles.pages} ${styles.case__text} ${styles.presse__plus__blue}`}>
               Innovative Website informiert über duale Studienmöglichkeiten und führt Schüler, Unternehmen und Hochschulen zusammen.
             </p>
 

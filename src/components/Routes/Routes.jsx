@@ -9,6 +9,8 @@ import Contact from '../pages/Contact';
 import About from '../pages/About';
 import Press from '../pages/Press';
 import Pressemitteilungen from '../pages/Pressemitteilungen';
+import Pressespiegel from '../pages/Pressespiegel';
+
 
 const RoutesComponent = () => (
   <Routes>
@@ -19,6 +21,7 @@ const RoutesComponent = () => (
     <Route path="/about" element={<About />} />
     <Route path="/press" element={<Press />} />
     <Route path="/press/pressemitteilungen" element={<Pressemitteilungen />} />
+    <Route path="/press/pressespiegel" element={<Pressespiegel />} />
   </Routes>
 );
 

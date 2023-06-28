@@ -291,7 +291,20 @@
   }
 
   &__plus {
-    font-style: italic;
-    color:#3C77F5;
+
+    &__blue {
+      font-style: italic;
+      color:#3C77F5;
+    }
+
+    &__green {
+      font-style: italic;
+      color:#A9D927;
+    }
+
+    &__orange {
+      font-style: italic;
+      color:#FD7A0D;
+    }
   }
 }
