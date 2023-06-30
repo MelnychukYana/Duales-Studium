@@ -161,6 +161,7 @@ useEffect(() => {
     setIsOpen12(false);
     setIsOpen13(false);
   };
+
   return (
     <div className={`${styles.container__menu} ${styles[`background-${activeLink}`]}`}>
       <div className={styles.block__btn}>
@@ -265,7 +266,7 @@ useEffect(() => {
               {isOpen2 && (
                 <ul className={styles.menu__list__mini}>
                   <li className={styles.menu__list__mini__item}>
-                    <Link to={ROUTES.HOME} className={styles.menu__list__mini__link}>
+                    <Link to={ROUTES.Allgemein} className={styles.menu__list__mini__link}>
                       Kurz und knapp
                     </Link>
                   </li>

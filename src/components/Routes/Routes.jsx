@@ -10,6 +10,7 @@ import About from '../pages/About';
 import Press from '../pages/Press';
 import Pressemitteilungen from '../pages/Pressemitteilungen';
 import Pressespiegel from '../pages/Pressespiegel';
+import Allgemein from '../pages/Kurz_und_knapp';
 
 
 const RoutesComponent = () => (
@@ -22,6 +23,7 @@ const RoutesComponent = () => (
     <Route path="/press" element={<Press />} />
     <Route path="/press/pressemitteilungen" element={<Pressemitteilungen />} />
     <Route path="/press/pressespiegel" element={<Pressespiegel />} />
+    <Route path="/allgemein" element={<Allgemein />} />
   </Routes>
 );
 
