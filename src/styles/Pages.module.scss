@@ -15,6 +15,7 @@
   line-height: 28.5px;
   width: 100%;
   white-space: pre-line; /* Перенос строки*/
+  text-align: justify;
 
   @include onTablet() {
     font-size: 16px;
@@ -117,6 +118,16 @@
   }
 }
 
+.line {
+  height: 1px;
+  width: 40%;
+  background-color:#A9D927;
+
+  &__container {
+    padding-top: 10px;
+  }
+}
+
 .case {
   padding-top: 20px;
 
@@ -126,10 +137,16 @@
 
   &__text {
     padding-top: 10px;
-  }
+    text-align: justify;
 
-  &__text:first-child {
-    padding-top: 0px;
+    &:first-child {
+      padding-top: 0px;
+    }
+
+    &__first {
+      text-align: justify;
+      padding-top: 0;
+    }
   }
 }
 
@@ -291,7 +308,6 @@
   }
 
   &__plus {
-
     &__blue {
       font-style: italic;
       color:#3C77F5;
@@ -305,6 +321,18 @@
     &__orange {
       font-style: italic;
       color:#FD7A0D;
+    }
+
+    &__pic {
+      width: 100%;
+      height: auto;
+
+      &__container {
+        width: 40%;
+        height: auto;
+        float: left;
+        margin-right: 24px;
+      }
     }
   }
 }

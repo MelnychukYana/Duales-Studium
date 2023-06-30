@@ -6,7 +6,10 @@ import index from "../../styles/index.module.scss";
 import styles from "../../styles/Pages.module.scss";
 import grid from "../../styles/grid.module.scss";
 
+import PRESSE from "../../images/presse_Nils.jpg";
+
 const Pressemitteilungen = () => {
+
   return (
     <div className={`${styles.pages}`} id="pressespiegel">
         <div className={`${index.container__pages} ${grid.grid}`}>
@@ -17,8 +20,11 @@ const Pressemitteilungen = () => {
           </div>
 
           <div className={`${styles.case} ${grid.grid__item__1_12} ${grid.grid__item__tablet__1_6} ${grid.grid__item__phone__1_2}`}>
+            <div className={`${styles.presse__plus__pic__container}`} >
+              <img src={PRESSE} alt="IMG" className={`${styles.presse__plus__pic}`} />
+            </div>
 
-            <p className={`${styles.pages} ${styles.case__text}`}>
+            <p className={`${styles.pages} ${styles.case__text__first}`}>
               Vlotho (va). Was bereits 2001 als lockeres Studentenprojekt begann, ist jetzt als Unternehmen an den Start gegangen. Mit 
               der Firma "Duales Studium GmbH" will der 31-jährige Exteraner Nils Frohloff quasi eine "Win-Win-Win-Idee" verwirklichen: 
               sinnvoll für Schüler als künftige Studenten, sinnvoll für die Hochschulen und sinnvoll für die Unternehmen.
@@ -66,6 +72,10 @@ const Pressemitteilungen = () => {
             <p className={`${styles.pages} ${styles.case__text}`}>
               Das Prinzip vergleicht Frohloff mit einer Internet-Flirtbörse, auf der sich Absolventen, aber auch Unternehmen individuell darstellen können. Über die bestehenden Internet-Angebote gehe das Start-Up hinaus, ist Frohloff überzeugt. "Denn viele Schulabgänger wissen nicht, was es überhaupt für Studiengänge gibt oder welche Partnerunternehmen infrage kommen. Sie suchen dann im Internet nur nach Angeboten, die sie ohnehin schon kennen."
             </p>
+
+            <div className={`${styles.line__container}`}>
+              <div className={`${styles.line}`}></div>
+            </div>
 
             <p className={`${styles.pages} ${styles.case__text}`}>
               Trefferquote durch Profile erhöhen
