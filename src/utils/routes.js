@@ -6,4 +6,6 @@ export const ROUTES = {
   ABOUT: "/about",
   PRESS: "/press",
   Allgemein: "/allgemein",
+  DSImDetail: "/duales-studium-im-detail",
+  FormenDesDS: "/formen-des-dualen-studiums",
 }

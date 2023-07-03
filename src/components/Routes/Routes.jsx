@@ -11,6 +11,8 @@ import Press from '../pages/Press';
 import Pressemitteilungen from '../pages/Pressemitteilungen';
 import Pressespiegel from '../pages/Pressespiegel';
 import Allgemein from '../pages/Kurz_und_knapp';
+import DSImDetail from '../pages/duales-studium-im-detail';
+import FormenDesDS from '../pages/formen-des-dualen-studiums';
 
 
 const RoutesComponent = () => (
@@ -24,6 +26,8 @@ const RoutesComponent = () => (
     <Route path="/press/pressemitteilungen" element={<Pressemitteilungen />} />
     <Route path="/press/pressespiegel" element={<Pressespiegel />} />
     <Route path="/allgemein" element={<Allgemein />} />
+    <Route path="/duales-studium-im-detail" element={<DSImDetail />} />
+    <Route path="/formen-des-dualen-studiums" element={<FormenDesDS />} />
   </Routes>
 );
 

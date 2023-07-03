@@ -271,12 +271,12 @@ useEffect(() => {
                     </Link>
                   </li>
                   <li className={styles.menu__list__mini__item}>
-                    <Link to={ROUTES.HOME} className={styles.menu__list__mini__link}>
+                    <Link to={ROUTES.DSImDetail} className={styles.menu__list__mini__link}>
                       Was ist ein duales Studium?
                     </Link>
                   </li>
                   <li className={styles.menu__list__mini__item}>
-                    <Link to={ROUTES.HOME} className={styles.menu__list__mini__link}>
+                    <Link to={ROUTES.FormenDesDS} className={styles.menu__list__mini__link}>
                       Unterschiedliche Formen
                     </Link>
                   </li>
