@@ -28,6 +28,18 @@
   &__link:hover {
     text-decoration: underline; 
   }
+
+  &__link {
+    &__blue {
+      cursor: pointer;
+      background: linear-gradient(#3C77F5 0 0) bottom /var(--t, 0) 1.5px no-repeat;
+      transition: 0.7s
+    }
+
+    &__blue:hover {
+      --t: 100%;
+    }
+  }
 }
 
 .blue__title {
@@ -346,10 +358,101 @@
   }
 }
 
-.menu_content {
+.item__content {
   display: none;
 }
 
-.menu_content.open {
+.item__content.open {
   display: block;
+}
+
+.item__main {
+  cursor: pointer;
+}
+
+.item__container {
+  width: 100%;
+  display: flex;
+  cursor: pointer;
+}
+
+.item__container:hover {
+  background: #175ef817;
+}
+
+.item__list {
+  padding-left: 20px;
+}
+
+//Анімація стрілок
+.arrowAccordion {
+  position: relative;
+  cursor: pointer;
+  margin: 9px;
+  width: 22px; /* Зменшений розмір div контейнера */
+  height: 10px; /* Зменшений розмір div контейнера */
+}
+
+.arrowAccordionLeft {
+  position: absolute;
+  background-color: transparent;
+  top: 4px;
+  left: 0;
+  width: 13px; /* Зменшений розмір полоски */
+  height: 3px; /* Зменшений розмір полоски */
+  display: block;
+  transform: rotate(35deg);
+  float: right;
+  border-radius: 1px;
+}
+
+.arrowWrapper {
+  align-items: center;
+}
+
+.arrowAccordionLeft::after {
+  content: '';
+  background-color: #3C77F5;
+  width: 13px; /* Зменшений розмір полоски */
+  height: 3px; /* Зменшений розмір полоски */
+  display: block;
+  float: right;
+  border-radius: 3px 5px 5px 3px;
+  transition: all 0.5s cubic-bezier(0.25, 1.7, 0.35, 0.8);
+  z-index: -1;
+}
+
+.arrowAccordionRight {
+  position: absolute;
+  background-color: transparent;
+  top: 4px;
+  left: 9px;
+  width: 13px; /* Зменшений розмір полоски */
+  height: 3px; /* Зменшений розмір полоски */
+  display: block;
+  transform: rotate(-35deg);
+  float: right;
+  border-radius: 1px;
+}
+
+.arrowAccordionRight::after {
+  content: '';
+  background-color: #3C77F5;
+  width: 13px; /* Зменшений розмір полоски */
+  height: 3px; /* Зменшений розмір полоски */
+  display: block;
+  float: right;
+  border-radius: 5px 3px 3px 5px;
+  transition: all 0.5s cubic-bezier(0.25, 1.7, 0.35, 0.8);
+  z-index: -1;
+}
+
+.open .arrowAccordionLeft::after {
+  transform-origin: center center;
+  transform: rotate(-70deg);
+}
+
+.open .arrowAccordionRight::after {
+  transform-origin: center center;
+  transform: rotate(70deg);
 }

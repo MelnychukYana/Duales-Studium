@@ -1,19 +1,38 @@
 import React, { useState } from 'react';
+import { Link as ScrollLink} from 'react-scroll';
+
 
 import index from "../../styles/index.module.scss";
 import styles from "../../styles/Pages.module.scss";
 import grid from "../../styles/grid.module.scss";
 
 const FormenDesDS = () => {
-  const [menuOpen1, setMenuOpen1] = useState(false);
-  const [menuOpen2, setMenuOpen2] = useState(false);
+  const [itemOpen1, setItemOpen1] = useState(false);
+  const [itemOpen2, setItemOpen2] = useState(false);
 
-  const toggleMenu1 = () => {
-    setMenuOpen1(!menuOpen1);
+  //Variables for arrow animation
+  const [arrowAnimation1, setArrowAnimation1] = useState(false);
+  const [isOpen1, setIsOpen1] = useState(false);
+
+  const [arrowAnimation2, setArrowAnimation2] = useState(false);
+  const [isOpen2, setIsOpen2] = useState(false);
+
+  const toggleItem1 = () => {
+    setItemOpen1(!itemOpen1);
   };
 
-  const toggleMenu2 = () => {
-    setMenuOpen2(!menuOpen2);
+  const toggleItem2 = () => {
+    setItemOpen2(!itemOpen2);
+  };
+
+  const toggleAccordion1 = () => {
+    setIsOpen1(!isOpen1);
+    setArrowAnimation1(!arrowAnimation1);
+  };
+
+  const toggleAccordion2 = () => {
+    setIsOpen2(!isOpen2);
+    setArrowAnimation2(!arrowAnimation2);
   };
 
   return (
@@ -31,19 +50,79 @@ const FormenDesDS = () => {
               Entscheidend sind vier zentrale Begrifflichkeiten, die sich wie folgt gruppieren lassen:
             </p>
 
-            <div className={styles.menu} onClick={toggleMenu1}>
-              <p>Erster Bildungsweg ohne vorherige abgeschlossene Ausbildung:</p>
-              <ul className={`${styles.menu_content} ${menuOpen1 ? styles.open : ""}`}>
-                <li><a href="#ausbildungsintegrierende">Ausbildungsintegrierende duale Studiengänge</a></li>
-                <li><a href="#praxisintegrierende">Praxisintegrierende duale Studiengänge</a></li>
+            <div className={styles.item}>
+              <div className={styles.item__container} onClick={toggleItem1}>
+                <p className={styles.item__main} onClick={toggleAccordion1}>Erster Bildungsweg ohne vorherige abgeschlossene Ausbildung</p>
+                <div className={`${styles.arrowAccordion} ${isOpen1 ? styles.open : ''}`} onClick={toggleAccordion1}>
+                  <div className={styles.arrowWrapper}>
+                    <span className={`${styles.arrowAccordionLeft} ${arrowAnimation1 ? styles.animate : ''}`}></span>
+                    <span className={`${styles.arrowAccordionRight} ${arrowAnimation1 ? styles.animate : ''}`}></span>
+                  </div>
+                </div>
+              </div>
+              <ul className={`${styles.item__content} ${itemOpen1 ? styles.open : ''}`}>
+                <li className={`${styles.item__list} ${styles.blue__text}`}>
+                  <ScrollLink
+                    to="ausbildungsintegrierende"
+                    spy={true}
+                    smooth={true}
+                    offset={-60}
+                    duration={500}
+                    className={`${styles.pages__link__blue}`}
+                  >
+                    Ausbildungsintegrierende duale Studiengänge
+                  </ScrollLink>
+                </li>
+                <li className={`${styles.item__list} ${styles.blue__text}`}>
+                  <ScrollLink
+                    to="praxisintegrierende"
+                    spy={true}
+                    smooth={true}
+                    offset={-50}
+                    duration={500}
+                    className={`${styles.pages__link__blue}`}
+                    >
+                      Praxisintegrierende duale Studiengänge
+                  </ScrollLink>
+                </li>
               </ul>
             </div>
 
-            <div className={styles.menu} onClick={toggleMenu2}>
-              <p>Weiterbildungsweg mit bereits abgeschlossener Ausbildung:</p>
-              <ul className={`${styles.menu_content} ${menuOpen2 ? styles.open : ""}`}>
-                <li><a href="#ausbildungsintegrierende">Berufsintegrierende duale Studiengänge</a></li>
-                <li><a href="#praxisintegrierende">Berufsbegleitende duale Studiengänge</a></li>
+            <div className={styles.item}>
+              <div className={styles.item__container} onClick={toggleItem2}>
+                <p className={styles.item__main} onClick={toggleAccordion2}>Weiterbildungsweg mit bereits abgeschlossener Ausbildung</p>
+                <div className={`${styles.arrowAccordion} ${isOpen2 ? styles.open : ''}`} onClick={toggleAccordion2}>
+                  <div className={styles.arrowWrapper}>
+                    <span className={`${styles.arrowAccordionLeft} ${arrowAnimation2 ? styles.animate : ''}`}></span>
+                    <span className={`${styles.arrowAccordionRight} ${arrowAnimation2 ? styles.animate : ''}`}></span>
+                  </div>
+                </div>
+              </div>
+              <ul className={`${styles.item__content} ${itemOpen2 ? styles.open : ""}`}>
+                <li className={`${styles.item__list} ${styles.blue__text}`}>
+                  <ScrollLink
+                      to="berufsintegrierende"
+                      spy={true}
+                      smooth={true}
+                      offset={-50}
+                      duration={500}
+                      className={`${styles.pages__link__blue}`}
+                    >
+                      Berufsintegrierende duale Studiengänge
+                    </ScrollLink>
+                </li>
+                <li className={`${styles.item__list} ${styles.blue__text}`}>
+                  <ScrollLink
+                    to="berufsbegleitende"
+                    spy={true}
+                    smooth={true}
+                    offset={-50}
+                    duration={500}
+                    className={`${styles.pages__link__blue}`}
+                  >
+                    Berufsbegleitende duale Studiengänge
+                  </ScrollLink>
+                </li>
               </ul>
             </div>
 
@@ -53,7 +132,7 @@ const FormenDesDS = () => {
       </div>
 
       <div className={`${index.container__blocks} ${grid.grid}`}>
-        <div className={`${styles.case} ${grid.grid__item__1_12} ${grid.grid__item__tablet__1_6} ${grid.grid__item__phone__1_2}`}>
+        <div className={`${styles.case} ${grid.grid__item__1_12} ${grid.grid__item__tablet__1_6} ${grid.grid__item__phone__1_2}`} id="ausbildungsintegrierende">
           <h3 className={`${styles.orange__title}`}>
             Ausbildungsintegrierende duale Studiengänge
           </h3>
@@ -69,7 +148,7 @@ const FormenDesDS = () => {
           </div>
         </div>
 
-        <div className={`${styles.case} ${grid.grid__item__1_12} ${grid.grid__item__tablet__1_6} ${grid.grid__item__phone__1_2}`}>
+        <div className={`${styles.case} ${grid.grid__item__1_12} ${grid.grid__item__tablet__1_6} ${grid.grid__item__phone__1_2}`} id="praxisintegrierende">
           <h3 className={`${styles.green__title}`}>
             Praxisintegrierende duale Studiengänge
           </h3>
@@ -84,7 +163,7 @@ const FormenDesDS = () => {
 
         </div>
 
-        <div className={`${styles.case} ${grid.grid__item__1_12} ${grid.grid__item__tablet__1_6} ${grid.grid__item__phone__1_2}`}>
+        <div className={`${styles.case} ${grid.grid__item__1_12} ${grid.grid__item__tablet__1_6} ${grid.grid__item__phone__1_2}`} id="berufsintegrierende">
           <h3 className={`${styles.blue__title}`}>
             Berufsintegrierende duale Studiengänge
           </h3>
@@ -102,7 +181,7 @@ const FormenDesDS = () => {
           </div>
         </div>
 
-        <div className={`${styles.case} ${grid.grid__item__1_12} ${grid.grid__item__tablet__1_6} ${grid.grid__item__phone__1_2}`}>
+        <div className={`${styles.case} ${grid.grid__item__1_12} ${grid.grid__item__tablet__1_6} ${grid.grid__item__phone__1_2}`} id="berufsbegleitende">
           <h3 className={`${styles.orange__title}`}>
             Berufsbegleitende duale Studiengänge
           </h3>
