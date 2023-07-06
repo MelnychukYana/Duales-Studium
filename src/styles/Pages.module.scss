@@ -23,6 +23,7 @@
 
   @include onPhone() {
     font-size: 14px;
+    line-height: 28px;
   }
 
   &__link:hover {
@@ -369,6 +370,7 @@
 
 .item__main {
   cursor: pointer;
+  padding-left: 15px;
 }
 
 .item__container {
@@ -382,7 +384,7 @@
 }
 
 .item__list {
-  padding-left: 20px;
+  padding-left: 25px;
 }
 
 //Анімація стрілок
@@ -390,8 +392,13 @@
   position: relative;
   cursor: pointer;
   margin: 9px;
-  width: 22px; /* Зменшений розмір div контейнера */
-  height: 10px; /* Зменшений розмір div контейнера */
+  width: 22px; 
+  height: 10px; 
+
+  @include onPhone() {
+    width: 15px; 
+    height: 7px; 
+  }
 }
 
 .arrowAccordionLeft {
@@ -405,6 +412,12 @@
   transform: rotate(35deg);
   float: right;
   border-radius: 1px;
+
+  @include onPhone() {
+    top: 3px;
+    width: 9px;
+    height: 2px;
+  }
 }
 
 .arrowWrapper {
@@ -421,6 +434,12 @@
   border-radius: 3px 5px 5px 3px;
   transition: all 0.5s cubic-bezier(0.25, 1.7, 0.35, 0.8);
   z-index: -1;
+
+  @include onPhone() {
+    width: 9px; 
+    height: 2px; 
+    border-radius: 2px 4px 4px 2px;
+  }
 }
 
 .arrowAccordionRight {
@@ -434,6 +453,13 @@
   transform: rotate(-35deg);
   float: right;
   border-radius: 1px;
+
+  @include onPhone() {
+    top: 3px;
+    left: 6px;
+    width: 9px; /* Зменшений розмір полоски */
+    height: 2px; /* Зменшений розмір полоски */
+  }
 }
 
 .arrowAccordionRight::after {
@@ -446,6 +472,12 @@
   border-radius: 5px 3px 3px 5px;
   transition: all 0.5s cubic-bezier(0.25, 1.7, 0.35, 0.8);
   z-index: -1;
+
+  @include onPhone() {
+    width: 9px;
+    height: 2px;
+    border-radius: 4px 2px 2px 4px;
+  }
 }
 
 .open .arrowAccordionLeft::after {

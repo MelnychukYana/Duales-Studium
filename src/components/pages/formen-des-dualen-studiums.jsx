@@ -38,11 +38,13 @@ const FormenDesDS = () => {
           <div className={`${styles.case}`}>
             <p className={`${styles.pages} ${styles.case__text}`}>
               Ein Duales Studium ist nicht einfach ein duales Studium. Es gibt verschiedene Formen, die sich in einigen Punkten wesentlich unterscheiden.
-              {"\n"}
+            </p>
+
+            <p className={`${styles.pages} ${styles.case__text}`}>
               Entscheidend sind vier zentrale Begrifflichkeiten, die sich wie folgt gruppieren lassen:
             </p>
 
-            <div className={styles.item}>
+            <div className={`${styles.item} ${styles.case__text}`}>
               <div className={styles.item__container} onClick={toggleItem1}>
                 <p className={styles.item__main}>Erster Bildungsweg ohne vorherige abgeschlossene Ausbildung</p>
                 <div className={`${styles.arrowAccordion} ${isOpen1 ? styles.open : ''}`}>
@@ -80,7 +82,7 @@ const FormenDesDS = () => {
               </ul>
             </div>
 
-            <div className={styles.item}>
+            <div className={`${styles.item} ${styles.case__text}`}>
               <div className={styles.item__container} onClick={toggleItem2}>
                 <p className={styles.item__main}>Weiterbildungsweg mit bereits abgeschlossener Ausbildung</p>
                 <div className={`${styles.arrowAccordion} ${isOpen2 ? styles.open : ''}`}>
@@ -132,9 +134,13 @@ const FormenDesDS = () => {
           <div className={styles.case}>
             <p className={`${styles.pages} ${styles.case__text}`}>
               Bei diesem, meist 4-jährigen Ausbildungsweg, wird ein Studium mit Bachelor-Abschluss und eine Ausbildung mit IHK/HWK-Abschluss, bzw. fachschulischem Abschluss kombiniert. Als Zugangsvoraussetzung gilt die allgemeine Hochschulreife oder die Fachhochschulreife. Außerdem wird normalerweise ein Ausbildungsvertrag zwischen Unternehmen und Student als Bedingung erwartet.
-              {"\n"}
+            </p>
+
+            <p className={`${styles.pages} ${styles.case__text}`}>
               Während des Studiums wird die Ausbildung tage- oder blockweise im Unternehmen absolviert. Dabei wird der gewohnte Berufsschulunterricht gestrafft und teilweise von der Hochschule übernommen. Auf diese Weise ist ein gewisser Bezug zwischen Theorie im Studium und der Praxis im Unternehmen gewährleistet.
-              {"\n"}
+            </p>
+
+            <p className={`${styles.pages} ${styles.case__text}`}>
               In einigen Bundesländern, vor allem an bayrischen Fachhochschulen, existiert eine Form von dualem Studium, bei der das Studium erst nach einem Jahr Ausbildung beginnt und die restliche Ausbildung in der studienfreien Zeit nachgeholt wird. Auch diese Form gehört zu den ausbildungsintegrierenden Studiengängen.
             </p>
           </div>
@@ -148,7 +154,9 @@ const FormenDesDS = () => {
           <div className={styles.case}>
             <p className={`${styles.pages} ${styles.case__text}`}>
               Dieser 3-4-jährige Ausbildungsweg verbindet ein Bachelor-Studium mit integrierten Praxisphasen. Interessenten benötigen im Vorfeld keinerlei Ausbildung oder Berufserfahrung. Allerdings gilt als Zugangsvoraussetzung die allgemeine Hochschulreife oder die Fachhochschulreife. Auch ein Arbeits-, Volontariats-, Praktikanten- oder Studienvertrag mit einem Unternehmen wird benötigt.
-              {"\n"}
+            </p>
+
+            <p className={`${styles.pages} ${styles.case__text}`}>
               Entweder findet der Studiengang in Form von Teilzeitarbeit im Unternehmen oder in langen Praxisphasen ohne Studium statt. Diese sind mit den Praxissemestern eines „normalen“ Studiums nicht zu vergleichen, da sie zumeist auf den Studieninhalt abgestimmt sind und so eine optimale Verzahnung von Theorie und Praxis ermöglichen.
             </p>
           </div>
@@ -163,11 +171,17 @@ const FormenDesDS = () => {
           <div className={styles.case}>
             <p className={`${styles.pages} ${styles.case__text}`}>
               Ein zumeist 3-4-jähriger Ausbildungsweg, der einen Studiums-Abschluss mit Teilzeittätigkeit kombiniert. Hierbei gilt eine abgeschlossene Berufsausbildung als Zugangsvoraussetzung, die allgemeine Hochschul- oder die Fachhochschulreife werden jedoch nicht erwartet. Außerdem benötigt ein Interessent einen Teilzeitarbeitsvertrag mit einem Unternehmen, wobei die Arbeit während des Studiums tage- oder blockweise ausgeführt wird.
-              {"\n"}
+            </p>
+
+            <p className={`${styles.pages} ${styles.case__text}`}>
               Es handelt sich um einen Ausbildungsweg, der eine Verknüpfung von Theorie und der dazu passenden Praxis ermöglicht.
-              {"\n"}
+            </p>
+
+            <p className={`${styles.pages} ${styles.case__text}`}>
               Bei einigen Studiengängen besteht auch die Option, zusätzlich eine Meisterqualifikation zu erlangen.
-              {"\n"}
+            </p>
+
+            <p className={`${styles.pages} ${styles.case__text}`}>
               Andere setzen einen Meister- oder Techniker-Abschluss voraus oder rechnen diese Abschlüsse mit an.
             </p>
           </div>
@@ -181,7 +195,9 @@ const FormenDesDS = () => {
           <div className={styles.case}>
             <p className={`${styles.pages} ${styles.case__text}`}>
               Hier wird ein Studien-Abschluss mit einer Vollzeittätigkeit kombiniert. Die allgemeine Hochschul- oder die Fachhochschulreife sind hierbei keine Voraussetzung.
-              {"\n"}
+            </p>
+
+            <p className={`${styles.pages} ${styles.case__text}`}>
               Es handelt sich um ein Selbststudium, das parallel zum regulären Arbeitsalltag verläuft und Begleitseminare beinhaltet, die höchstens an einem Tag in der Woche stattfinden. Dabei nimmt das Unternehmen eine unterstützende Rolle ein, sei es durch Freistellung oder Erleichterung der Arbeit.
             </p>
           </div>
