@@ -8,29 +8,21 @@ import grid from "../../styles/grid.module.scss";
 
 const FormenDesDS = () => {
   const [itemOpen1, setItemOpen1] = useState(false);
-  const [itemOpen2, setItemOpen2] = useState(false);
-
-  //Variables for arrow animation
-  const [arrowAnimation1, setArrowAnimation1] = useState(false);
   const [isOpen1, setIsOpen1] = useState(false);
+  const [arrowAnimation1, setArrowAnimation1] = useState(false);
 
+  const [itemOpen2, setItemOpen2] = useState(false);
   const [arrowAnimation2, setArrowAnimation2] = useState(false);
   const [isOpen2, setIsOpen2] = useState(false);
 
   const toggleItem1 = () => {
     setItemOpen1(!itemOpen1);
-  };
-
-  const toggleItem2 = () => {
-    setItemOpen2(!itemOpen2);
-  };
-
-  const toggleAccordion1 = () => {
     setIsOpen1(!isOpen1);
     setArrowAnimation1(!arrowAnimation1);
   };
 
-  const toggleAccordion2 = () => {
+  const toggleItem2 = () => {
+    setItemOpen2(!itemOpen2);
     setIsOpen2(!isOpen2);
     setArrowAnimation2(!arrowAnimation2);
   };
@@ -52,8 +44,8 @@ const FormenDesDS = () => {
 
             <div className={styles.item}>
               <div className={styles.item__container} onClick={toggleItem1}>
-                <p className={styles.item__main} onClick={toggleAccordion1}>Erster Bildungsweg ohne vorherige abgeschlossene Ausbildung</p>
-                <div className={`${styles.arrowAccordion} ${isOpen1 ? styles.open : ''}`} onClick={toggleAccordion1}>
+                <p className={styles.item__main}>Erster Bildungsweg ohne vorherige abgeschlossene Ausbildung</p>
+                <div className={`${styles.arrowAccordion} ${isOpen1 ? styles.open : ''}`}>
                   <div className={styles.arrowWrapper}>
                     <span className={`${styles.arrowAccordionLeft} ${arrowAnimation1 ? styles.animate : ''}`}></span>
                     <span className={`${styles.arrowAccordionRight} ${arrowAnimation1 ? styles.animate : ''}`}></span>
@@ -81,8 +73,8 @@ const FormenDesDS = () => {
                     offset={-50}
                     duration={500}
                     className={`${styles.pages__link__blue}`}
-                    >
-                      Praxisintegrierende duale Studiengänge
+                  >
+                    Praxisintegrierende duale Studiengänge
                   </ScrollLink>
                 </li>
               </ul>
@@ -90,8 +82,8 @@ const FormenDesDS = () => {
 
             <div className={styles.item}>
               <div className={styles.item__container} onClick={toggleItem2}>
-                <p className={styles.item__main} onClick={toggleAccordion2}>Weiterbildungsweg mit bereits abgeschlossener Ausbildung</p>
-                <div className={`${styles.arrowAccordion} ${isOpen2 ? styles.open : ''}`} onClick={toggleAccordion2}>
+                <p className={styles.item__main}>Weiterbildungsweg mit bereits abgeschlossener Ausbildung</p>
+                <div className={`${styles.arrowAccordion} ${isOpen2 ? styles.open : ''}`}>
                   <div className={styles.arrowWrapper}>
                     <span className={`${styles.arrowAccordionLeft} ${arrowAnimation2 ? styles.animate : ''}`}></span>
                     <span className={`${styles.arrowAccordionRight} ${arrowAnimation2 ? styles.animate : ''}`}></span>
