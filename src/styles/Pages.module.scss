@@ -18,7 +18,7 @@
   text-align: justify;
 
   @include onTablet() {
-    font-size: 16px;
+    font-size: 15.5px;
   }
 
   @include onPhone() {
@@ -92,6 +92,11 @@
   color:#FD7A0D;
 }
 
+.orange__section {
+  width: 100%;
+  background-color: #ffa55b38;
+}
+
 .green__title {
   color:#A9D927;
   font-size: 20px;
@@ -110,6 +115,11 @@
 
 .green__text {
   color:#A9D927;
+}
+
+.green__section {
+  width: 100%;
+  background-color: #d5ff614f;
 }
 
 .container {
@@ -488,4 +498,86 @@
 .open .arrowAccordionRight::after {
   transform-origin: center center;
   transform: rotate(70deg);
+}
+
+//formen-des-dualen-studiums
+
+//duales-studium-im-detail
+
+.details__background {
+  content: "";
+  width: 100%;
+  height: 100%;
+  margin-top: 49px;
+  background-image: url('../images/background_university.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.details__background .details__text,
+.details__background .details__title {
+  color: #000000; /* кольори тексту на прозорому фоні */
+  text-align: center;
+}
+
+.details__container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.details__item {
+  flex: 1;
+
+  @include onPhone () {
+    flex-basis: 100%;
+  }
+}
+
+.details__item:not(:last-child) {
+  margin-right: 1%;
+
+  @include onPhone () {
+    margin-right: 0px;
+    margin-top: 1.5%;
+  }
+}
+
+.details__item:not(:first-child) {
+  margin-left: 1%;
+
+
+  @include onPhone () {
+    margin-left: 0px;
+    margin-bottom: 1.5%;
+  }
+}
+
+.details__item__content {
+  width: 100%;
+  padding: 7%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.details__container__pic {
+  width: 20%;
+  height: auto;
+
+  @include onPhone () {
+    width: 15%;
+  }
+}
+
+.details__pic {
+  width: 100%;
+  height: auto;
 }
