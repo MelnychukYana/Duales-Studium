@@ -281,17 +281,17 @@ useEffect(() => {
                     </Link>
                   </li>
                   <li className={styles.menu__list__mini__item}>
-                    <Link to={ROUTES.HOME} className={styles.menu__list__mini__link}>
+                    <Link to={ROUTES.Gehalt} className={styles.menu__list__mini__link}>
                       Vergütung
                     </Link>
                   </li>
                   <li className={styles.menu__list__mini__item}>
-                    <Link to={ROUTES.HOME} className={styles.menu__list__mini__link}>
+                    <Link to={ROUTES.Zeitmodelle } className={styles.menu__list__mini__link}>
                       Zeitmodelle
                     </Link>
                   </li>
                   <li className={styles.menu__list__mini__item}>
-                    <Link to={ROUTES.HOME} className={styles.menu__list__mini__link}>
+                    <Link to={ROUTES.Entwicklung} className={styles.menu__list__mini__link}>
                       Entwicklung
                     </Link>
                   </li>
