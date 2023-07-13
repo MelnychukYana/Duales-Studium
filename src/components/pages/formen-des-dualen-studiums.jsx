@@ -104,15 +104,15 @@ const FormenDesDS = () => {
               <ul className={`${styles.item__content} ${itemOpen2 ? styles.open : ""}`}>
                 <li className={`${styles.item__list} ${styles.blue__text}`}>
                   <ScrollLink
-                      to="berufsintegrierende"
-                      spy={true}
-                      smooth={true}
-                      offset={-50}
-                      duration={500}
-                      className={`${styles.pages__link__blue}`}
-                    >
-                      Berufsintegrierende duale Studiengänge
-                    </ScrollLink>
+                    to="berufsintegrierende"
+                    spy={true}
+                    smooth={true}
+                    offset={-50}
+                    duration={500}
+                    className={`${styles.pages__link__blue}`}
+                  >
+                    Berufsintegrierende duale Studiengänge
+                  </ScrollLink>
                 </li>
                 <li className={`${styles.item__list} ${styles.blue__text}`}>
                   <ScrollLink
