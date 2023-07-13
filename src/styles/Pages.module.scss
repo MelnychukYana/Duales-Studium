@@ -325,18 +325,16 @@
     }
 
     &__pic {
-      width: 40%;
-      height: auto;
+      width: 15%;
+
+      @include onTablet() {
+        width: 30%;
+      }
 
       @include onPhone() {
-        width: 50%;
+        width: 40%;
       }
     }
-  }
-
-  &__pic {
-    width: 100%;
-    height: auto;
   }
 
   &__plus {

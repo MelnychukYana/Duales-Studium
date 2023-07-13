@@ -6,7 +6,7 @@ import index from "../../styles/index.module.scss";
 import styles from "../../styles/Pages.module.scss";
 import grid from "../../styles/grid.module.scss";
 
-import NEWSPAPERS from "../../images/newspapers.png";
+import NEWSPAPERS from "../../images/newspaper.png";
 
 const Press = () => {
   return (
@@ -64,7 +64,7 @@ const Press = () => {
       <div className={`${styles.case} ${grid.grid__item__1_12} ${grid.grid__item__tablet__1_6} ${grid.grid__item__phone__1_2}`}>
         <div className={`${styles.presse__container}`}>
           <div className={`${styles.presse__container__pic}`}>
-            <img src={NEWSPAPERS} alt="IMG" className={`${styles.presse__pic}`} />
+            <img src={NEWSPAPERS} alt="IMG" />
           </div>
 
 
