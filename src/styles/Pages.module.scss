@@ -370,6 +370,17 @@
 }
 
 //formen-des-dualen-studiums
+.formen_title{
+  text-align: center;
+}
+
+.formen__container {
+  @include onPhone() {
+    width: 50%;
+    margin: 0 auto;
+  }
+}
+
 .item__content {
   display: none;
 }
@@ -581,3 +592,79 @@
   width: 100%;
   height: auto;
 }
+
+//gehalt
+.gehalt__container__pic {
+  width: 30%;
+  height: auto;
+  float: left;
+  margin-right: 24px;
+
+  @include onPhone () {
+    width: 40%;
+    margin-right: 12px;
+  }
+}
+
+//ZEITMODELLE
+.calendar__box {
+  width: 75%;
+
+  @include onPhone () {
+    width: 100%;
+  }
+}
+
+.calendar__container {
+  padding-top: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include onPhone () {
+    padding-top: 10px;
+  }
+}
+
+.calendar__wochenmodell {
+  max-width: 100%;
+  height: auto;
+}
+
+//Entwicklung
+
+.entwicklung__container__pic {
+  width: 50%;
+  height: auto;
+  float: left;
+  margin-right: 24px;
+  
+  @include onPhone () {
+    width: 100%;
+    margin-right: 12px;
+  }
+}
+
+//.allgemein
+.allgemein__container__pic {
+  width: 100%;
+  padding-top: 20px;
+
+  @include onPhone() {
+    width: 50%;
+    margin: 0 auto;
+
+    padding-top: 10px;
+  }
+}
+
+.pic {
+  max-width: 100%;
+  height: auto;
+
+  @include onPhone() {
+    margin: 0 auto;
+    max-width: 50%;
+  }
+}
+

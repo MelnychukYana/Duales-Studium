@@ -4,6 +4,10 @@ import index from "../../styles/index.module.scss";
 import styles from "../../styles/Pages.module.scss";
 import grid from "../../styles/grid.module.scss";
 
+import WOCHENMODELL from "../../images/terminkaleder_wochenmodell.png";
+import BLOCKMODELL from "../../images/terminkalender_blockmodell.png";
+
+
 const Zeitmodelle = () => {
   return (
     <div className={`${styles.pages}`} id='zeitmodelle'>
@@ -30,6 +34,13 @@ const Zeitmodelle = () => {
             </p>
           </div>
 
+          
+          <div className={styles.calendar__container}>
+            <div className={styles.calendar__box}>
+              <img src={BLOCKMODELL} alt="IMG" className={`${styles.calendar__wochenmodell}` } />
+            </div>
+          </div>
+
         </div>
 
       <div className={`${styles.case} ${grid.grid__item__1_12} ${grid.grid__item__tablet__1_6} ${grid.grid__item__phone__1_2}`}>
@@ -40,13 +51,20 @@ const Zeitmodelle = () => {
         <div className={styles.case}>
           <p className={`${styles.pages} ${styles.case__text}`}>
             Dieses Modell verbindet den theoretischen und praktischen Aspekt sehr zeitnah. So verbringt der Studierende in diesem System drei Tage in der Woche im Betrieb (rot), die anderen zwei/drei Tage dann in der Hochschule (grün). Das Wochenmodell zeichnet sich also dadurch aus, dass beide Phasen im direkten Wechsel in jeder Woche vertreten sind.
-            {"\n"}
-            Natürlich sind diese Angaben nicht verbindlich. Wie genau die Verteilung der Phasen geregelt ist, liegt bei der Hochschule und dem Unternehmen. Die Beispiele sollten lediglich die beiden grundsätzlichen Typen veranschaulichen.
-            {"\n"}
-            Welches System besser oder angenehmer ist, lässt sich allgemeinen nicht beantworten. Es hängt von den Vorlieben des Studierenden ab: Fällt es Dir schwer, dich kurzfristig umzustellen? Möchtest Du Dich auf beide Aspekte immer voll konzentrieren können? Dann liegt Dir das Blockmodell eher. Willst Du die direkte Verbindung zwischen Theorie und Praxis haben und Gelerntes unmittelbar im Betrieb umsetzen? Dann empfiehlt sich für Dich eher das Wochensystem.
           </p>
         </div>
 
+        <div className={styles.calendar__container}>
+          <div className={styles.calendar__box}>
+            <img src={WOCHENMODELL} alt="IMG" className={`${styles.calendar__wochenmodell}` } />
+          </div>
+        </div>
+
+        <p className={`${styles.pages} ${styles.case__text}`}>
+          Natürlich sind diese Angaben nicht verbindlich. Wie genau die Verteilung der Phasen geregelt ist, liegt bei der Hochschule und dem Unternehmen. Die Beispiele sollten lediglich die beiden grundsätzlichen Typen veranschaulichen.
+          {"\n"}
+          Welches System besser oder angenehmer ist, lässt sich allgemeinen nicht beantworten. Es hängt von den Vorlieben des Studierenden ab: Fällt es Dir schwer, dich kurzfristig umzustellen? Möchtest Du Dich auf beide Aspekte immer voll konzentrieren können? Dann liegt Dir das Blockmodell eher. Willst Du die direkte Verbindung zwischen Theorie und Praxis haben und Gelerntes unmittelbar im Betrieb umsetzen? Dann empfiehlt sich für Dich eher das Wochensystem.
+        </p>
       </div>
     </div>
   </div>

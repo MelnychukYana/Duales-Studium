@@ -4,6 +4,11 @@ import index from "../../styles/index.module.scss";
 import styles from "../../styles/Pages.module.scss";
 import grid from "../../styles/grid.module.scss";
 
+
+import INFOGRAM1 from "../../images/infogram_1.png";
+import INFOGRAM2 from "../../images/infogram_2.png";
+import INFOGRAM3 from "../../images/infogram_3.png";
+
 const Entwicklung = () => {
   return (
     <div className={`${styles.pages}`} id='entwicklung-des-dualen-studiums'>
@@ -13,7 +18,7 @@ const Entwicklung = () => {
         </div>
 
         <div className={`${styles.case} ${grid.grid__item__1_12} ${grid.grid__item__tablet__1_6} ${grid.grid__item__phone__1_2}`}>
-          <h3 className={`${styles.orange__title}`}>
+          <h3 className={`${styles.blue__title}`}>
             Die Geschichte
           </h3>
 
@@ -50,6 +55,10 @@ const Entwicklung = () => {
         </h3>
 
         <div className={styles.case}>
+          <div className={`${styles.entwicklung__container__pic}`}>
+            <img src={INFOGRAM1} alt="IMG" className={`${styles.entwicklung__infogram}`} />
+          </div>
+
           <p className={`${styles.pages} ${styles.case__text}`}>
             Die Zahl der dualen Studiengänge nimmt immer weiter zu. Wo am Anfang nur Studiengänge aus dem technischen oder wirtschaftlichen Bereich angeboten
              wurden, finden sich nun zum Beispiel auch soziale Studiengänge wie Pflege oder Psychologie. Außerdem werden immer mehr berufsbegleitende Studiengänge zur Weiterbildung angeboten. Seit 2007 bedeutet dies ein Wachstum um 718 auf 1.384 duale Studiengänge im Jahr 2012. Logischerweise muss es daher auch mehr Studierende geben als vorher, richtig?
@@ -63,7 +72,11 @@ const Entwicklung = () => {
           Studierende
         </h3>
 
-        <div className={styles.case}>
+        <div className={`${styles.case}`}>
+          <div className={`${styles.entwicklung__container__pic }`}>
+            <img src={INFOGRAM2} alt="IMG" className={`${styles.entwicklung__infogram}`} />
+          </div>
+
           <p className={`${styles.pages} ${styles.case__text}`}>
             Richtig! Auch hier ist der Anstieg bemerkenswert: Mehr 20.000 Studierende sind im angesprochenen Zeitraum der vergangenen sechs Jahre dazu gekommen. Damit liegt die Ausbildungsform bei 64.093 Studierenden bundesweit für das Jahr 2012. Tendenz natürlich weiterhin steigend. Damit diese Entwicklung beibehalten werden kann, müssen natürlich auch viele Unternehmen mit den Hochschulen kooperieren…
           </p>
@@ -77,6 +90,10 @@ const Entwicklung = () => {
           </h3>
 
           <div className={styles.case}>
+            <div className={`${styles.entwicklung__container__pic}`}>
+              <img src={INFOGRAM3} alt="IMG" className={`${styles.entwicklung__infogram}`} />
+            </div>
+
             <p className={`${styles.pages} ${styles.case__text}`}>
               Und das machen Sie auch. Allein der Sprung in den vergangenen drei Jahren war enorm: 2010 waren es noch 27.900 Unternehmen, die duale Studenten einstellen, nur ein Jahr später waren es mit 40.874 Firmen 46,5 Prozent mehr. Im Jahr 2012 boten deutschlandweit 45.630 Unternehmen mindestens einen dualen Studiengang an. Somit entwickeln sich alle drei Parteien weiter: Die Unternehmen stellen mehr duale Studierende ein, die Hochschulen entwickeln immer mehr neue Studiengänge, immer mehr Schülerinnen und Schüler entscheiden sich für ein duales Studium. So kann es weiter gehen.
             </p>

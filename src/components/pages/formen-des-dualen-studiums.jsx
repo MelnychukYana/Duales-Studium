@@ -6,6 +6,9 @@ import index from "../../styles/index.module.scss";
 import styles from "../../styles/Pages.module.scss";
 import grid from "../../styles/grid.module.scss";
 
+
+import PHONE from "../../images/phone.png";
+
 const FormenDesDS = () => {
   const [itemOpen1, setItemOpen1] = useState(false);
   const [isOpen1, setIsOpen1] = useState(false);
@@ -30,10 +33,16 @@ const FormenDesDS = () => {
   return (
     <div className={`${styles.pages}`} id="formen-des-dualen-studiums">
       <div className={`${index.container__pages} ${styles.blue__section} ${grid.grid}`}>
-        <div className={`${grid.grid__item__1_12} ${grid.grid__item__tablet__1_6} ${grid.grid__item__phone__1_2}`}>
-          <div className={`${styles.blue__title} `}>
-            <h2>Die Unterschiede - Verschiedene Formen des dualen Studiums</h2>
-          </div>
+
+        <div className={`${styles.blue__title} ${grid.grid__item__1_12} ${grid.grid__item__tablet__1_6} ${grid.grid__item__phone__1_2}`}>
+          <h2>Die Unterschiede - Verschiedene Formen des dualen Studiums</h2>
+        </div>
+
+        <div className={`${styles.formen__container} ${styles.formen__center} ${grid.grid__item__1_4} ${grid.grid__item__tablet__1_3} ${grid.grid__item__phone__1_2}`}>
+          <img src={PHONE} alt="IMG" />
+        </div>
+
+        <div className={`${styles.case} ${grid.grid__item__5_12} ${grid.grid__item__tablet__4_6} ${grid.grid__item__phone__1_2}`}>
 
           <div className={`${styles.case}`}>
             <p className={`${styles.pages} ${styles.case__text}`}>
@@ -126,6 +135,7 @@ const FormenDesDS = () => {
       </div>
 
       <div className={`${index.container__blocks} ${grid.grid}`}>
+
         <div className={`${styles.case} ${grid.grid__item__1_12} ${grid.grid__item__tablet__1_6} ${grid.grid__item__phone__1_2}`} id="ausbildungsintegrierende">
           <h3 className={`${styles.orange__title}`}>
             Ausbildungsintegrierende duale Studiengänge
