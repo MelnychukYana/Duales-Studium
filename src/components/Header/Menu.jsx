@@ -241,17 +241,17 @@ useEffect(() => {
               {isOpen1 && (
                 <ul className={styles.menu__list__mini}>
                   <li className={styles.menu__list__mini__item}>
-                    <Link to={ROUTES.HOME} className={styles.menu__list__mini__link}>
+                    <Link to={ROUTES.MACHMIT} className={styles.menu__list__mini__link}>
                       Mach mit!
                     </Link>
                   </li>
                   <li className={styles.menu__list__mini__item}>
-                    <Link to={ROUTES.HOME} className={styles.menu__list__mini__link}>
+                    <Link to={ROUTES.SEARCHIT} className={styles.menu__list__mini__link}>
                       Search it!
                     </Link>
                   </li>
                   <li className={styles.menu__list__mini__item}>
-                    <Link to={ROUTES.HOME} className={styles.menu__list__mini__link}>
+                    <Link to={ROUTES.COMMUNITY} className={styles.menu__list__mini__link}>
                       Die Community!
                     </Link>
                   </li>

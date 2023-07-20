@@ -13,10 +13,14 @@ import Pressespiegel from '../pages/Pressespiegel';
 import Allgemein from '../pages/Kurz_und_knapp';
 import DSImDetail from '../pages/duales-studium-im-detail';
 import FormenDesDS from '../pages/formen-des-dualen-studiums';
-
 import Gehalt from '../pages/gehalt-studiengebuhren';
 import Zeitmodelle from '../pages/Zeitmodelle';
 import Entwicklung from '../pages/Entwicklung-des-dualen-studiums';
+
+import MachMit from '../pages/Mach-mit';
+import SearchIt from '../pages/Search-it';
+import Community from '../pages/Community';
+
 
 
 const RoutesComponent = () => (
@@ -35,6 +39,10 @@ const RoutesComponent = () => (
     <Route path="/gehalt-studiengebuhren" element={<Gehalt />} />
     <Route path="/zeitmodelle" element={<Zeitmodelle />} />
     <Route path="/entwicklung-des-dualen-studiums" element={<Entwicklung />} />
+
+    <Route path="/mach-mit" element={<MachMit />} />
+    <Route path="/search-it" element={<SearchIt />} />
+    <Route path="/community" element={<Community />} />
 
   </Routes>
 );

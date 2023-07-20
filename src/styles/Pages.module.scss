@@ -545,7 +545,7 @@
   flex: 1;
 
   @include onPhone () {
-    flex-basis: 100%;
+    flex-basis: 100%; 
   }
 }
 
@@ -667,3 +667,151 @@
   }
 }
 
+// Los geht's
+.info {
+  display: flex;
+
+  
+  @include onPhone () {
+    flex-direction: column;
+  }
+
+  &__text {
+    padding-top: 5px;
+    font-size: 15px;
+    line-height: 26px;
+    width: 100%;
+    white-space: pre-line; /* Перенос строки*/
+    text-align: justify;
+
+    @include onTablet() {
+      line-height: 22px;
+    }
+  
+    @include onPhone() {
+      font-size: 13px;
+      line-height: 22px;
+    }
+  }
+
+  &__title {
+    font-weight: bold;
+    text-align: center;
+  }
+}
+
+.info__container {
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.info__box {
+  width: 30%;
+  height: auto;
+
+  @include onPhone () {
+    width: 15%;
+  }
+}
+
+.info__item__blue {
+  margin-right: 0%;
+  padding: 1.5%;
+  border-radius: 5%;
+  border: 2px solid transparent;
+  transition: border-color 0.3s ease;
+
+  @include onPhone () {
+    border-radius: 0%;
+    margin-top: 2%;
+  }
+}
+
+.info__item__blue:hover {
+  border-color: #3C77F5; 
+}
+
+.info__item__orange {
+  margin-right: 2%;
+  padding: 1.5%;
+  border-radius: 5%;
+  border: 2px solid transparent;
+  transition: border-color 0.3s ease;
+
+  @include onPhone () {
+    border-radius: 0%;
+    margin-top: 2%;
+  }
+}
+
+
+.info__item__orange:hover {
+  border-color: #FD7A0D; 
+}
+
+.info__item__green {
+  margin-right: 2%;
+  padding: 1.5%;
+  border-radius: 5%;
+  border: 2px solid transparent;
+  transition: border-color 0.3s ease;
+
+  @include onPhone () {
+    border-radius: 0%;
+    margin-top: 2%;
+  }
+}
+
+
+.info__item__green:hover {
+  border-color: #A9D927; 
+}
+
+.community__container__pic {
+  width: 20%;
+  height: auto;
+  float: left;
+
+  @include onTablet () {
+    width: 30%;
+  }
+
+  @include onPhone () {
+    width: 40%;
+  }
+}
+
+.search__container__pic {
+  width: 20%;
+  padding-left: 3%;
+  height: auto;
+  float: right;
+
+  @include onTablet () {
+    width: 30%;
+  }
+
+  @include onPhone () {
+    width: 40%;
+  }
+}
+
+.search__arrow {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+i {
+  border: solid #3C77F5;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 4px;
+  margin-right: 1%;
+
+  @include onPhone () {
+    margin-right: 1.5%;
+    padding: 3px;
+  }
+}

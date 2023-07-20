@@ -11,4 +11,7 @@ export const ROUTES = {
   Gehalt: "/gehalt-studiengebuhren",
   Zeitmodelle: "/zeitmodelle",
   Entwicklung: "/entwicklung-des-dualen-studiums",
+  MACHMIT: "/mach-mit",
+  SEARCHIT: "/search-it",
+  COMMUNITY: "/community",
 }
